@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>quiz</title>
+ <link rel="stylesheet" href="src/styles/style.css">
+</head>
+<body>
+<main class="app">
+ <h1 class="app__title">The Quiz</h1>
+ <section class="quiz">
+   <div class="quiz__info">
+      <div class="quiz__info-question">
+         <label class="quiz__question-label" for="questions" id="questions"></label>
+      </div>
+    </div>
+  <div class="quiz__answers">
+          <div class="quiz__answers-container">
+              <div class="quiz__answer">
+                 <input class="quiz__answers-input" type="radio" name="option" value="1">
+                 <label class="quiz__answers-label" id="1"></label>
+              </div>
+              <div class="quiz__answer">
+                 <input class="quiz__option-input" type="radio" name="option" value="2">
+                 <label class="quiz__option-label" id="2"></label>
+              </div>
+              <div class="quiz__answer">
+                 <input class="quiz__option-input" type="radio" name="option" value="3">
+                 <label class="quiz__option-label" id="3"></label>
+              </div>
+              <div class="quiz__answer">
+                 <input class="quiz__option-input" type="radio" name="option" value="4">
+                 <label class="quiz__option-label" id="4"></label>
+              </div>
+          </div>
+  </div>
+  <button class="quiz__next-button">Next</button>
+  <section class="quiz__end">
+     <p class="quiz__end-result"></p>
+ <div class="quiz__score-container">
+          <p>Пройдено вопросов: <span class="quiz__score" id="score"></span></p>
+      </div>
+   </section>
+  </main>
+ <script src="db.json"></script>
+  <script type="text/javascript"="script.js"></script>
+</body>
+</html>
+
+

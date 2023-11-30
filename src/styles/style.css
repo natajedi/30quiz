@@ -1,0 +1,142 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Arial', sans-serif;
+}
+
+body {
+ background-color: #230747;
+ color: #fff;
+ box-sizing: border-box;
+ font-family: 'Arial', sans-serif;
+}
+
+.app {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 2rem;
+ min-height: 100vh;
+}
+
+.app__title {
+ font-size: 2rem;
+ margin-bottom: 2rem;
+}
+ 
+.quiz {
+ background-color: #634d83;
+ padding: 1rem;
+ width: 100%;
+ max-width: 640px;
+ border-radius: 0.5rem;
+}
+
+.quiz__info {
+ display: flex;
+ justify-content: space-between;
+ font-size: 1.25rem;
+}
+
+.quiz__info-question {
+ color: #8F8F8F;
+ font-size: 1.25rem;
+ }
+
+.quiz__info-score {
+ color: #ffffff;
+ font-size: 1.25rem;
+ }
+
+.quiz__answers {
+ margin-bottom: 1rem;
+ }
+
+.quiz__answer {
+ display: block;
+ padding: 1rem;
+ background-color: #dde1e6;
+ margin-bottom: 0.5rem;
+ border-radius: 0.5rem;
+ cursor: pointer;
+ }
+
+.quiz__answer:hover {
+ background-color: #9471c7;
+ }
+
+.quiz__answer--correct {
+ background-color: rgb(26, 154, 90);
+ }
+
+.quiz__answer--wrong {
+ background-color: #c01218;
+ }
+
+.quiz__answer:last-of-type {
+ margin-bottom: 0;
+ }
+
+.quiz__answer--disabled {
+ opacity: 0.5;
+ }
+
+.quiz__answer input {
+ display: none;
+ }
+
+.quiz__next-button {
+ appearance: none;
+ outline: none;
+ border: none;
+ cursor: pointer;
+ padding: 0.5rem 1rem;
+ background-color: #149756;
+ color: #e4e3e7;
+ font-weight: 700;
+ text-transform: uppercase;
+ font-size: 1.25rem;
+ border-radius: 0.5rem;
+ }
+ 
+.quiz__next-button:disabled {
+ opacity: 0.5;
+ }
+ 
+.quiz__end-title {
+ font-size: 2rem;
+ margin-bottom: 2rem;
+ text-align: center;
+ }
+
+.quiz__end-result {
+ color: #8f8f8f;
+ font-size: 1.25rem;
+ text-align: center;
+ }
+
+@media (max-width: 600px) {
+ .app__title {
+  font-size: 1.5rem;
+ }
+ .quiz {
+  width: 100%;
+  max-width: 320px;
+ }
+ .quiz__info {
+  flex-direction: column;
+ }
+ .quiz__answer {
+  font-size: 0.8rem;
+ }
+ .quiz__next-button {
+  font-size: 0.8rem;
+ }
+}
+
+
+
+
+
+

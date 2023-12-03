@@ -1,13 +1,13 @@
-import { create, router as _router, defaults, bodyParser } from 'json-server'
-const server = create()
-const router = _router('data/db.json')
-const middlewares = defaults()
+const jsonServer = require('json-server')
+const server = jsonServer.create()
+const router = jsonServer.router('data/db.json')
+const middlewares = jsonServer.defaults()
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares)
 
 // Add custom routes before JSON Server router
-server.use(bodyParser)
+server.use(jsonServer.bodyParser)
 server.post('/calculate-result', (req, res) => {
     const questions = router.db.get('questions').value();
     const answers = req.body.answers;
@@ -42,6 +42,7 @@ server.post('/check-answer', (req, res) => {
         correctAnswerId: correctQuestionAnswerId
     });
 });
+
 
 // Use default router
 server.use(router)
